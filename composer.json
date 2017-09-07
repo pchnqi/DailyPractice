@@ -1,0 +1,22 @@
+{
+    "name": "php-practice/nqi",
+    "description": "a package for php practice purpose",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "nqi",
+            "email": "nqi@pch.com"
+        }
+    ],
+    "autoload": {
+      "classmap": [
+
+      ],
+      "autoload": {
+        "Source\\": "src/"
+      }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
