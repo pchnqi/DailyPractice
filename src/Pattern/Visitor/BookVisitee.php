@@ -3,6 +3,7 @@
 namespace Source\Pattern\Visitor;
 
 use Source\Pattern\Visitor\Visitee;
+use Source\Pattern\Visitor\Visitor;
 
 class BookVisitee extends Visitee
 {

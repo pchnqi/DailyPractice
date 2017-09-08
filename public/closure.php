@@ -1,10 +1,12 @@
 <?php
 
-require 'Pipepp.php';
-require 'Pipe.php';
+require __DIR__ . '/../vendor/autoload.php';
+
+use Source\Closure\App;
+use Source\Closure\Pipe;
 
 // $app->dispatch( '/users/name' );
-$app = new Pipepp();
+$app = new App();
 $app->addRoute( '/users/name', function () {
 	$this->responseContentType = 'application/json;charset=utf8';
 	$this->responseBody        = '{"name" : "PCH"}';
@@ -17,14 +19,14 @@ $obj1 = new Pipe(1);
 $obj2 = new Pipe(2);
 
 $cl = $obj1->getClosure();
-var_dump( $cl );
-echo $cl() ;
+// var_dump( $cl );
+writeln( $cl() );
 
 $cl = $cl->bindTo( $obj2 );
-var_dump( $cl );
-echo $cl(), '<br>';
+// var_dump( $cl );
+writeln( $cl() );
 
-echo '----  Pipe ---- ';
+writeln( '----  Pipe ---- ' );
 
 $array = ['Pipe', 'B', 'C'];
 

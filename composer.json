@@ -6,14 +6,21 @@
     "authors": [
         {
             "name": "nqi",
-            "email": "nqi@pch.com"
+            "email": "nqi@pch.com",
+            "role": "Developer"
         }
     ],
     "autoload": {
       "psr-4":{
           "Source\\": "src/"
-      }
+      },
+      "files": [
+          "auxiliaries/helpers.php"
+      ]
     },
     "minimum-stability": "dev",
-    "require": {}
+    "require": {},
+    "support": {
+        "email": "nqi@Pch.com"
+    }
 }

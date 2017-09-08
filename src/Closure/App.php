@@ -1,5 +1,7 @@
 <?php
 
+namespace Source\Closure;
+
 class App
 {
 
@@ -8,7 +10,7 @@ class App
 	protected $responseStatus      = '500';
 	protected $responseBody        = 'hello, world';
 
-	public function addRoute ( $routePath, Closure $routeCallback )
+	public function addRoute ( $routePath, \Closure $routeCallback )
 	{
 		$this->routes[$routePath] = $routeCallback->bindTo( $this, __CLASS__ );
 		// var_dump( $this->routes['/users/name'] );

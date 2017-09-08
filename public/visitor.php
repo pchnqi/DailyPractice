@@ -1,6 +1,6 @@
 <?php
-// Visitor Pattern
 
+// Visitor Pattern
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Source\Pattern\Visitor\Visitee;
@@ -40,9 +40,3 @@ function acceptVisitor ( Visitee $visitee_in, Visitor $visitor_in )
 	$visitee_in->accept( $visitor_in );
 }
 
-function writeln ( $line_in )
-{
-	echo $line_in . PHP_EOL;
-}
-
-echo 'Trunk';

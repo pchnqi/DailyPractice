@@ -27,7 +27,7 @@ class PlainDescriptionVisitor extends Visitor
 	function visitSoftware ( SoftwareVisitee $softwareVisiteeIn )
 	{
 		$this->setDescription( $softwareVisiteeIn->getTitle() .
-		                       '. made by ' . $softwareVisiteeIn->getSoftwareCompany() .
+		                       '. made by '    . $softwareVisiteeIn->getSoftwareCompany() .
 		                       '. website at ' . $softwareVisiteeIn->getSoftwareCompanyURL() );
 	}
 }

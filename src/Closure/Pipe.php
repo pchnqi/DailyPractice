@@ -8,7 +8,7 @@
  * @copyright   (c) Publishers Clearing House. All rights reserved.
  */
 
-// namespace Closure\Pipe;
+namespace Source\Closure;
 
 /**
  * Class Pipe
