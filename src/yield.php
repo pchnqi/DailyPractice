@@ -4,7 +4,7 @@
 // Generator
 function getYields() {
 	yield 'http://LaravelAcademy.org';
-	yield 'Laravel学院';
+	yield 'Laravel';
 	yield 'Laravel Academy';
 }
 

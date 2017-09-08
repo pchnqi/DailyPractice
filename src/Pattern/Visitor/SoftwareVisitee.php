@@ -1,8 +1,8 @@
 <?php
 
-namespace Pattern\Visitor;
+namespace Source\Pattern\Visitor;
 
-use Pattern\Visitor\Visitee;
+use Source\Pattern\Visitor\Visitee;
 
 class SoftwareVisitee extends Visitee {
 	private $title;
