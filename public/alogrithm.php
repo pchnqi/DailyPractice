@@ -11,7 +11,7 @@ $test_array = $algorithm->randomArray(10, true);
 $after_reverse = $algorithm->reverse($test_array);
 
 writeln('Array1: ' . print_array($test_array));
-writeln('Array2: '. print_array($after_reverse));
+writeln('Array2: ' . print_array($after_reverse));
 
 $t2 = $algorithm->randomArray(30, true);
 $t3 = $algorithm->randomArray(40, true);

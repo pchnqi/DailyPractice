@@ -2,9 +2,6 @@
 
 namespace Source\Algorithm;
 
-/**
-*
-*/
 class Algorithm
 {
     public function reverse(array $array)
@@ -23,7 +20,7 @@ class Algorithm
         return $array;
     }
 
-    public function findCommon ( Array $sortedA, Array $sortedB )
+    public function findCommon(array $sortedA, array $sortedB)
     {
         $i = 0;
         $j = 0;
@@ -32,13 +29,13 @@ class Algorithm
 
         $common = [];
 
-        while ( $i < $sizeA && $j < $sizeB ) {
-            if ( $sortedA[$i] < $sortedB[$j]) {
+        while ($i < $sizeA && $j < $sizeB) {
+            if ($sortedA[$i] < $sortedB[$j]) {
                 $i++;
                 continue;
             }
 
-            if ( $sortedA[$i] > $sortedB[$j]) {
+            if ($sortedA[$i] > $sortedB[$j]) {
                 $j++;
                 continue;
             }
@@ -51,19 +48,24 @@ class Algorithm
         return array_unique($common);
     }
 
-    public function randomArray ( $size, $isSort = false, $start = 0, $end = 100 )
+    public function customShuffle( Array $array )
+    {
+        
+    }
+
+    public function randomArray($size, $toSort = false, $start = 0, $end = 100)
     {
         $array = [];
         
-        while ( $size >= 0) {
+        while ($size >= 0) {
             $array[] = mt_rand($start, $end);
             $size--;
         }
 
-        if ($isSort) {
+        if ($toSort) {
             sort($array);
-         } 
+        }
 
         return $array;
-    } 
+    }
 }

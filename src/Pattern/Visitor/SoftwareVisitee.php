@@ -2,39 +2,36 @@
 
 namespace Source\Pattern\Visitor;
 
-use Source\Pattern\Visitor\Visitee;
-
 class SoftwareVisitee extends Visitee
 {
+    private $title;
+    private $softwareCompany;
+    private $softwareCompanyURL;
 
-	private $title;
-	private $softwareCompany;
-	private $softwareCompanyURL;
+    public function __construct($title_in, $softwareCompany_in, $softwareCompanyURL_in)
+    {
+        $this->title = $title_in;
+        $this->softwareCompany = $softwareCompany_in;
+        $this->softwareCompanyURL = $softwareCompanyURL_in;
+    }
 
-	function __construct ( $title_in, $softwareCompany_in, $softwareCompanyURL_in )
-	{
-		$this->title              = $title_in;
-		$this->softwareCompany    = $softwareCompany_in;
-		$this->softwareCompanyURL = $softwareCompanyURL_in;
-	}
+    public function getSoftwareCompany()
+    {
+        return $this->softwareCompany;
+    }
 
-	function getSoftwareCompany ()
-	{
-		return $this->softwareCompany;
-	}
+    public function getSoftwareCompanyURL()
+    {
+        return $this->softwareCompanyURL;
+    }
 
-	function getSoftwareCompanyURL ()
-	{
-		return $this->softwareCompanyURL;
-	}
+    public function getTitle()
+    {
+        return $this->title;
+    }
 
-	function getTitle ()
-	{
-		return $this->title;
-	}
-
-	function accept ( Visitor $visitorIn )
-	{
-		$visitorIn->visitSoftware( $this );
-	}
+    public function accept(Visitor $visitorIn)
+    {
+        $visitorIn->visitSoftware($this);
+    }
 }

@@ -2,32 +2,29 @@
 
 namespace Source\Pattern\Visitor;
 
-use Source\Pattern\Visitor\Visitor;
-
 class PlainDescriptionVisitor extends Visitor
 {
+    private $description = null;
 
-	private $description = null;
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	function getDescription ()
-	{
-		return $this->description;
-	}
+    public function setDescription($descriptionIn)
+    {
+        $this->description = $descriptionIn;
+    }
 
-	function setDescription ( $descriptionIn )
-	{
-		$this->description = $descriptionIn;
-	}
+    public function visitBook(BookVisitee $bookVisiteeIn)
+    {
+        $this->setDescription($bookVisiteeIn->getTitle().'. written by '.$bookVisiteeIn->getAuthor());
+    }
 
-	function visitBook ( BookVisitee $bookVisiteeIn )
-	{
-		$this->setDescription( $bookVisiteeIn->getTitle() . '. written by ' . $bookVisiteeIn->getAuthor() );
-	}
-
-	function visitSoftware ( SoftwareVisitee $softwareVisiteeIn )
-	{
-		$this->setDescription( $softwareVisiteeIn->getTitle() .
-		                       '. made by '    . $softwareVisiteeIn->getSoftwareCompany() .
-		                       '. website at ' . $softwareVisiteeIn->getSoftwareCompanyURL() );
-	}
+    public function visitSoftware(SoftwareVisitee $softwareVisiteeIn)
+    {
+        $this->setDescription($softwareVisiteeIn->getTitle().
+                               '. made by '.$softwareVisiteeIn->getSoftwareCompany().
+                               '. website at '.$softwareVisiteeIn->getSoftwareCompanyURL());
+    }
 }
