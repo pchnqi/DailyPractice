@@ -2,8 +2,8 @@
 
 // @function: filter_list
 $filters = filter_list();
-foreach($filters as $filter_name) {
-	echo $filter_name .": ".filter_id($filter_name) ."<br>";
+foreach ($filters as $filter_name) {
+    echo $filter_name.': '.filter_id($filter_name).'<br>';
 }
 
 // @function: filter_has_var

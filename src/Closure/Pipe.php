@@ -1,8 +1,9 @@
 <?php
 /**
- * pipe.php
- * @package         PhpStorm
+ * pipe.php.
+ *
  * @version         1.0.0
+ *
  * @author          nqi
  * @license         Proprietary
  * @copyright   (c) Publishers Clearing House. All rights reserved.
@@ -11,23 +12,21 @@
 namespace Source\Closure;
 
 /**
- * Class Pipe
- * @package Closure\Pipe
+ * Class Pipe.
  */
 class Pipe
 {
-	protected $val;
+    protected $val;
 
-	public function __construct ( $val )
-	{
-		$this->val = $val;
-	}
+    public function __construct($val)
+    {
+        $this->val = $val;
+    }
 
-	public function getClosure ()
-	{
-		return function () {
-			echo $this->val;
-		};
-	}
+    public function getClosure()
+    {
+        return function () {
+            echo $this->val;
+        };
+    }
 }
-

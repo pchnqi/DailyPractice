@@ -2,33 +2,29 @@
 
 namespace Source\Pattern\Visitor;
 
-use Source\Pattern\Visitor\Visitee;
-use Source\Pattern\Visitor\Visitor;
-
 class BookVisitee extends Visitee
 {
+    private $author;
+    private $title;
 
-	private $author;
-	private $title;
+    public function __construct($title_in, $author_in)
+    {
+        $this->author = $author_in;
+        $this->title = $title_in;
+    }
 
-	function __construct ( $title_in, $author_in )
-	{
-		$this->author = $author_in;
-		$this->title  = $title_in;
-	}
+    public function getAuthor()
+    {
+        return $this->author;
+    }
 
-	function getAuthor ()
-	{
-		return $this->author;
-	}
+    public function getTitle()
+    {
+        return $this->title;
+    }
 
-	function getTitle ()
-	{
-		return $this->title;
-	}
-
-	function accept ( Visitor $visitorIn )
-	{
-		$visitorIn->visitBook( $this );
-	}
+    public function accept(Visitor $visitorIn)
+    {
+        $visitorIn->visitBook($this);
+    }
 }
